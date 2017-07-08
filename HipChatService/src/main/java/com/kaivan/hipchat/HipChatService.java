@@ -3,14 +3,9 @@ package com.kaivan.hipchat;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -35,14 +30,11 @@ public class HipChatService {
      * @return
      */
     @GET
-    @Path("/{message}")
+    @Path("")
     @Produces(MediaType.APPLICATION_JSON)
-    public ParsedMessage parseMessage(@PathParam("message") String message) {
-        logger.log(Level.INFO, "EMOTICONS");
+    public ParsedMessage parseMessage(@DefaultValue("") @QueryParam("message") String message) {
         List<String> emoticons = parseEmoticons(message);
-        logger.log(Level.INFO, "MENTIONS");
         List<String> mentions = parseMentions(message);
-        logger.log(Level.INFO, "URLS");
         List<Link> links = parseUrls(message);
         ParsedMessage parsedMessage = new ParsedMessage(mentions, emoticons, links);
         return parsedMessage;
@@ -63,7 +55,6 @@ public class HipChatService {
             String title = "";
             try {
                 URL url = new URL(urlString);
-                System.out.println("URL : " + urlString);
                 BufferedReader in = new BufferedReader(
                         new InputStreamReader(url.openStream()));
 
@@ -82,7 +73,6 @@ public class HipChatService {
             }
             Link link = new Link(urlString, title);
             links.add(link);
-            logger.log(Level.INFO, urlString + "\t" + title);
         }
         return links;
     }
@@ -100,7 +90,6 @@ public class HipChatService {
         while (mentionsMatcher.find()) {
             String mention = mentionsMatcher.group().replaceAll("\\W+","");
             mentions.add(mention);
-            logger.log(Level.INFO, mention);
         }
         return mentions;
     }
@@ -118,15 +107,11 @@ public class HipChatService {
         while (emoticonMatcher.find()) {
             String emoticon = emoticonMatcher.group().replaceAll("\\W+","");
             emoticons.add(emoticon);
-            logger.log(Level.INFO, emoticon);
         }
         return emoticons;
     }
 
     // TODO : Write up Readme with what all you would do. Integration tests etc
-    // TODO : Write up comments
     // TODO : Write up Readme with how to run the project
-
-    // TODO : Consider how mentions are done for non-word characters
 }
 
