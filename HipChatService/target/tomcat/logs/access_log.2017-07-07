@@ -1,0 +1,10 @@
+0:0:0:0:0:0:0:1 - - [07/Jul/2017:08:30:11 -0500] "GET /newjersey/hipchat/parsemessage/sadassadsa HTTP/1.1" 200 41 http-bio-8080-exec-1 154
+0:0:0:0:0:0:0:1 - - [07/Jul/2017:08:44:37 -0500] "GET /newjersey/hipchat/parsemessage/sadassadsa HTTP/1.1" 200 41 http-bio-8080-exec-1 146
+0:0:0:0:0:0:0:1 - - [07/Jul/2017:19:28:45 -0500] "GET /newjersey/hipchat/parsemessage/sadassadsa HTTP/1.1" 200 634 http-bio-8080-exec-1 3016
+0:0:0:0:0:0:0:1 - - [07/Jul/2017:19:28:51 -0500] "GET /newjersey/hipchat/parsemessage/sadassadsa HTTP/1.1" 200 570 http-bio-8080-exec-2 7683
+0:0:0:0:0:0:0:1 - - [07/Jul/2017:20:08:40 -0500] "GET /newjersey/hipchat/parsemessage/sadassadsa HTTP/1.1" 200 41 http-bio-8080-exec-1 149
+0:0:0:0:0:0:0:1 - - [07/Jul/2017:20:08:55 -0500] "GET /newjersey/hipchat/parsemessage/sadassadsa HTTP/1.1" 200 41 http-bio-8080-exec-3 3
+0:0:0:0:0:0:0:1 - - [07/Jul/2017:20:10:23 -0500] "GET /newjersey/hipchat/parsemessage/sadassadsa HTTP/1.1" 200 41 http-bio-8080-exec-1 171
+0:0:0:0:0:0:0:1 - - [07/Jul/2017:20:11:21 -0500] "GET /newjersey/hipchat/parsemessage/sadassadsa HTTP/1.1" 500 7275 http-bio-8080-exec-1 60
+0:0:0:0:0:0:0:1 - - [07/Jul/2017:20:14:02 -0500] "GET /newjersey/hipchat/parsemessage/sadassadsa HTTP/1.1" 200 579 http-bio-8080-exec-1 2795
+0:0:0:0:0:0:0:1 - - [07/Jul/2017:20:14:30 -0500] "GET /newjersey/hipchat/parsemessage/sadassadsa HTTP/1.1" 200 573 http-bio-8080-exec-1 6575

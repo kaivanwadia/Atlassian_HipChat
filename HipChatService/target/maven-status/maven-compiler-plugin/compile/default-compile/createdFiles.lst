@@ -1,0 +1,4 @@
+com\kaivan\hipchat\HipChatService.class
+com\kaivan\hipchat\ParsedMessage.class
+com\kaivan\hipchat\Link.class
+com\kaivan\hipchat\Patterns.class
