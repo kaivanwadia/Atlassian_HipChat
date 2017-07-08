@@ -11,7 +11,7 @@ To run it simply import the project (HipChatService) into Intellij and run the t
 To make requests to the API you can make a GET request to the following URL :
 http://localhost:8080/newjersey/hipchat/parse/message/
 
-Include the query parameter *message*
+Include the query parameter *message*.
 
 Sample Request:
 ```

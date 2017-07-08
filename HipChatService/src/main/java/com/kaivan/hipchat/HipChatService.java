@@ -1,6 +1,7 @@
 package com.kaivan.hipchat;
 
 import org.jsoup.Jsoup;
+import org.jsoup.helper.StringUtil;
 import org.jsoup.nodes.Document;
 
 import javax.ws.rs.*;
@@ -19,7 +20,7 @@ import java.util.regex.Pattern;
 /**
  * Created by kaivanwadia
  */
-@Path("/parsemessage")
+@Path("/parse")
 public class HipChatService {
 
     private Logger logger = Logger.getLogger(HipChatService.class.getName());
@@ -30,9 +31,12 @@ public class HipChatService {
      * @return
      */
     @GET
-    @Path("")
+    @Path("/message")
     @Produces(MediaType.APPLICATION_JSON)
     public ParsedMessage parseMessage(@DefaultValue("") @QueryParam("message") String message) {
+        if (StringUtil.isBlank(message)) {
+            return new ParsedMessage();
+        }
         List<String> emoticons = parseEmoticons(message);
         List<String> mentions = parseMentions(message);
         List<Link> links = parseUrls(message);
@@ -110,8 +114,5 @@ public class HipChatService {
         }
         return emoticons;
     }
-
-    // TODO : Write up Readme with what all you would do. Integration tests etc
-    // TODO : Write up Readme with how to run the project
 }
 

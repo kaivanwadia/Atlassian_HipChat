@@ -1,0 +1,4 @@
+0:0:0:0:0:0:0:1 - - [08/Jul/2017:10:01:57 -0500] "GET /newjersey/hipchat/parsemessage/?message=(sadS) HTTP/1.1" 404 967 http-bio-8080-exec-1 39
+0:0:0:0:0:0:0:1 - - [08/Jul/2017:10:02:03 -0500] "GET /newjersey/hipchat/parsemessage/?message=(sadS) HTTP/1.1" 404 967 http-bio-8080-exec-3 1
+0:0:0:0:0:0:0:1 - - [08/Jul/2017:10:02:32 -0500] "GET /newjersey/hipchat/parse/message/?message=(sadS) HTTP/1.1" 200 47 http-bio-8080-exec-1 162
+127.0.0.1 - - [08/Jul/2017:10:02:44 -0500] "GET /newjersey/hipchat/parse/message/?message=(saDSA) HTTP/1.1" 200 48 http-bio-8080-exec-4 15
